@@ -6,10 +6,10 @@ const PORT = process.env.PORT || 3000;
 
 // send https to http because openweather does not allow on https
 app.use(function(req,res,next){
-  if(req.headers['x-forwarded-proto'] === 'http'){
-    next(); //proceed normally
-  }else{
+  if(req.headers['x-forwarded-proto'] === 'https'){
     res.redirect("http://" + req.hostname + req.url);
+  }else{
+    next(); //proceed normally
   }
 });
 
