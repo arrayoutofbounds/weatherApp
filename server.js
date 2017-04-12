@@ -2,7 +2,7 @@ var express = require('express');
 
 // create our app
 var app = express();
-const PORT = Number(process.env.PORT || 3000);
+const PORT = process.env.PORT || 3000;
 
 // send https to http because openweather does not allow on https
 app.use(function(req,res,next){
