@@ -12,6 +12,9 @@ var Examples = require('Examples');
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation(); // fire off foundation
 
+// app css load it after doing sass followed by css and style loaders
+require('style!css!sass!applicationStyles');
+
 // render the component
 // weather component nested in main because we want to shown main when weather component is shown
 // nest about component because we want to show main when we shoud about

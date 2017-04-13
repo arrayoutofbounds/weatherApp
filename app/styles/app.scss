@@ -1,0 +1,11 @@
+$space-large: 50px;
+$space-medium: 30px;
+
+.page-title{
+  margin-top: $space-large;
+  margin-bottom: $space-medium;
+}
+
+input[type=search]{
+  box-shadow: none;
+}

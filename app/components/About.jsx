@@ -4,13 +4,12 @@ var React = require('react');
 var About = (props) => {
     return (
         <div>
-            <h1 className="text-center">
+            <h1 className="text-center page-title">
                 About
             </h1>
             <p>
                 This is a weather app built on react.
             </p>
-            <p>
                 Some of the tools used are:
                 <ul>
                     <li>
@@ -21,7 +20,6 @@ var About = (props) => {
                         </a>
                     </li>
                 </ul>
-            </p>
         </div>
     )
 }
