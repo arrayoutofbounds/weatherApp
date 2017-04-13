@@ -6,6 +6,12 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
+// load Foundation
+// need to use css loader as require cannot load in css file.
+// need to use style loaded to inject css in to html
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation(); // fire off foundation
+
 // render the component
 // weather component nested in main because we want to shown main when weather component is shown
 // nest about component because we want to show main when we shoud about

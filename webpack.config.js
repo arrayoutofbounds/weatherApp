@@ -1,5 +1,19 @@
+var webpack = require('webpack');
 module.exports = {
-  entry: './app/app.jsx',
+  entry: [
+    'script!jquery/dist/jquery.min.js',
+    'script!foundation-sites/dist/foundation.min.js',
+    './app/app.jsx'
+  ],
+  externals: {
+    jquery: 'jQuery' // want jQuery name available in external scripts. this is needed for foundation
+  },
+  plugins: [
+    new webpack.ProvidePlugin({ // plugings allow us to use $ without loading in the script all the time
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
